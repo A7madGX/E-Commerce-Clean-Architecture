@@ -1,0 +1,16 @@
+flutter_native_splash:
+  color: '#FFFFFF'
+  color_dark: '#272727'
+  image: assets/logos/flutter_logo.png
+  image_dark: assets/logos/flutter_logo.png
+
+  android_12:
+    color: '#FFFFFF'
+    color_dark: '#272727'
+    image: assets/logos/flutter_logo.png
+    image_dark: assets/logos/flutter_logo.png
+
+  web: false
+
+# run the following to create the splash screen: flutter pub run flutter_native_splash:create --path=splash.yaml
+# run the following to delete the splash screen: flutter pub run flutter_native_splash:remove

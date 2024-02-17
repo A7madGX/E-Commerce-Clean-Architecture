@@ -1,11 +1,12 @@
+import 'dart:math';
+
 import 'package:data_connection_checker_tv/data_connection_checker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'dart:math';
 import 'package:provider/provider.dart';
 
 import '../../../../../core/connection/network_info.dart';
-import '../../../../../core/constants/constants.dart';
+import '../../../../../core/constants/texts.dart';
 import '../providers/pokemon_provider.dart';
 import '../providers/selected_pokemon_item_provider.dart';
 import 'custom_elevated_button_widget.dart';
@@ -15,8 +16,7 @@ class SearchPokemonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    ScaffoldMessengerState scaffoldMessengerState =
-        ScaffoldMessenger.of(context);
+    ScaffoldMessengerState scaffoldMessengerState = ScaffoldMessenger.of(context);
     SelectedPokemonItemProvider selectedPokemonItem =
         Provider.of<SelectedPokemonItemProvider>(context);
     return Padding(
@@ -53,8 +53,7 @@ class SearchPokemonWidget extends StatelessWidget {
                     margin: EdgeInsets.only(
                       bottom: MediaQuery.of(context).viewInsets.bottom,
                     ),
-                    color:
-                        CupertinoColors.systemBackground.resolveFrom(context),
+                    color: CupertinoColors.systemBackground.resolveFrom(context),
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
@@ -111,12 +110,10 @@ class SearchPokemonWidget extends StatelessWidget {
             textColor: Colors.white,
             iconColor: Colors.white,
             callback: () async {
-              Provider.of<PokemonProvider>(context, listen: false)
-                  .eitherFailureOrPokemon(
+              Provider.of<PokemonProvider>(context, listen: false).eitherFailureOrPokemon(
                 value: (selectedPokemonItem.number + 1).toString(),
               );
-              if (await NetworkInfoImpl(DataConnectionChecker()).isConnected ==
-                  false) {
+              if (await NetworkInfoImpl(DataConnectionChecker()).isConnected == false) {
                 scaffoldMessengerState.clearSnackBars();
                 scaffoldMessengerState.showSnackBar(
                   const SnackBar(

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../../../core/constants/constants.dart';
+
+import '../../../../../core/constants/texts.dart';
 import '../../../../../core/errors/failure.dart';
 import '../../business/entities/pokemon_entity.dart';
 import '../providers/pokemon_provider.dart';
@@ -58,11 +59,13 @@ class DataWidget extends StatelessWidget {
                             children: [
                               ListTile(
                                 title: Text(kFrontDefault),
-                                subtitle: SelectableText(pokemon.sprites.other.officialArtwork.frontDefault),
+                                subtitle: SelectableText(
+                                    pokemon.sprites.other.officialArtwork.frontDefault),
                               ),
                               ListTile(
                                 title: Text(kFrontShiny),
-                                subtitle: SelectableText(pokemon.sprites.other.officialArtwork.frontShiny),
+                                subtitle: SelectableText(
+                                    pokemon.sprites.other.officialArtwork.frontShiny),
                               ),
                             ],
                           ),

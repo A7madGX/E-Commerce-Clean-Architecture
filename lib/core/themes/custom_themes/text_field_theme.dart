@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+
+import '../../constants/colors.dart';
+import '../../constants/sizes.dart';
+
+class GTextFieldTheme {
+  GTextFieldTheme._();
+  static InputDecorationTheme lightInputDecorationTheme = InputDecorationTheme(
+    errorMaxLines: 2,
+    prefixIconColor: GColors.grey,
+    suffixIconColor: GColors.grey,
+    // constraints: BoxConstraints.expand(height: 14),
+    labelStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.black),
+    hintStyle: const TextStyle().copyWith(
+      fontSize: 14,
+      color: Colors.black,
+    ),
+    errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
+    floatingLabelStyle: const TextStyle().copyWith(color: Colors.black.withOpacity(0.8)),
+    border: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: GColors.grey)),
+    enabledBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: GColors.grey)),
+    focusedBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: Colors.black12)),
+    errorBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: Colors.red)),
+    focusedErrorBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: Colors.orange)),
+  );
+
+  static InputDecorationTheme darkInputDecorationTheme = InputDecorationTheme(
+    errorMaxLines: 2,
+    prefixIconColor: GColors.grey,
+    suffixIconColor: GColors.grey,
+    // constraints: BoxConstraints.expand(height: 14),
+    labelStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.white),
+    hintStyle: const TextStyle().copyWith(
+      fontSize: 14,
+      color: Colors.white,
+    ),
+    errorStyle: const TextStyle().copyWith(fontStyle: FontStyle.normal),
+    floatingLabelStyle: const TextStyle().copyWith(color: Colors.white.withOpacity(0.8)),
+    border: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: GColors.grey)),
+    enabledBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: GColors.grey)),
+    focusedBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: Colors.white)),
+    errorBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: Colors.red)),
+    focusedErrorBorder: const OutlineInputBorder().copyWith(
+        borderRadius: BorderRadius.circular(GSizes.cardRadiusMd),
+        borderSide: const BorderSide(width: 1, color: Colors.orange)),
+  );
+}

@@ -1,4 +1,4 @@
-import '../../../../../core/constants/constants.dart';
+import '../../../../../core/constants/texts.dart';
 import '../../business/entities/sub_entites.dart';
 
 //! Sprites
@@ -104,4 +104,3 @@ class TypeModel extends TypeEntity {
     };
   }
 }
-

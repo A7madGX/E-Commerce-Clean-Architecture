@@ -1,6 +1,6 @@
-import 'sub_models.dart';
-import '../../../../../core/constants/constants.dart';
+import '../../../../../core/constants/texts.dart';
 import '../../business/entities/pokemon_entity.dart';
+import 'sub_models.dart';
 
 class PokemonModel extends PokemonEntity {
   const PokemonModel({

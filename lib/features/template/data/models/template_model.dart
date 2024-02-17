@@ -1,4 +1,4 @@
-import '../../../../../core/constants/constants.dart';
+import '../../../../../core/constants/texts.dart';
 import '../../business/entities/template_entity.dart';
 
 class TemplateModel extends TemplateEntity {
