@@ -21,9 +21,10 @@ class GSizes {
 
   // Button sizes
   static const double buttonHeight = 18.0;
-  static const double buttonRadius = 12.0;
+  static const double buttonRadius = 14.0;
   static const double buttonWidth = 120.0;
   static const double buttonElevation = 4.0;
+  static const double buttonCircularRadius = 25.0;
 
   // AppBar size
   static const double appBarHeight = 56.0;

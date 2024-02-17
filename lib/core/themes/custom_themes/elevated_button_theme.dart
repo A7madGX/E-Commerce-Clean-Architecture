@@ -13,12 +13,9 @@ class GElevatedButtonTheme {
       disabledBackgroundColor: GColors.grey,
       disabledForegroundColor: GColors.grey,
       side: const BorderSide(color: GColors.primary),
-      padding: const EdgeInsets.symmetric(vertical: GSizes.sm, horizontal: GSizes.xs),
+      padding: const EdgeInsets.symmetric(vertical: GSizes.md, horizontal: GSizes.xs),
       textStyle: const TextStyle(
-        fontSize: GSizes.fontSizeMd,
-        color: GColors.white,
-        fontWeight: FontWeight.w600,
-      ),
+          fontSize: GSizes.fontSizeMd, color: GColors.white, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(GSizes.buttonRadius)),
     ),
   );
@@ -30,12 +27,9 @@ class GElevatedButtonTheme {
       disabledBackgroundColor: GColors.grey,
       disabledForegroundColor: GColors.grey,
       side: const BorderSide(color: GColors.primary),
-      padding: const EdgeInsets.symmetric(vertical: GSizes.sm, horizontal: GSizes.xs),
+      padding: const EdgeInsets.symmetric(vertical: GSizes.md, horizontal: GSizes.xs),
       textStyle: const TextStyle(
-        fontSize: GSizes.fontSizeMd,
-        color: GColors.white,
-        fontWeight: FontWeight.w600,
-      ),
+          fontSize: GSizes.fontSizeMd, color: GColors.white, fontWeight: FontWeight.w600),
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(GSizes.buttonRadius)),
     ),
   );

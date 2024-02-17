@@ -20,13 +20,14 @@ class OnBoardingProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void nextPage() {
+  void nextPage(BuildContext context) {
     if (pageIndex < maxPage) {
       pageIndex++;
       scrollToPage(pageIndex);
       notifyListeners();
     } else {
       // Go to login page
+      Navigator.of(context).pushReplacementNamed('/signIn');
     }
   }
 

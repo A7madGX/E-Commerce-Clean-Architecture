@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/sigin_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:flutter_mapp_clean_architecture/features/onboarding/presentation/providers/onboarding_provider.dart';
 import 'package:provider/provider.dart';
@@ -34,7 +35,11 @@ class GApp extends StatelessWidget {
         themeMode: ThemeMode.system,
         theme: GAppTheme.lightTheme,
         darkTheme: GAppTheme.darkTheme,
-        home: const OnBoardingScreen(),
+        initialRoute: '/onBoarding',
+        routes: {
+          '/onBoarding': (context) => const OnBoardingScreen(),
+          '/signIn': (context) => const SignInScreen(),
+        },
       ),
     );
   }

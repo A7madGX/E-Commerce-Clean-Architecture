@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/colors.dart';
 import 'package:flutter_mapp_clean_architecture/core/themes/custom_themes/app_bar_theme.dart';
 import 'package:flutter_mapp_clean_architecture/core/themes/custom_themes/bottom_sheet_theme.dart';
+import 'package:flutter_mapp_clean_architecture/core/themes/custom_themes/checkbox_theme.dart';
 import 'package:flutter_mapp_clean_architecture/core/themes/custom_themes/elevated_button_theme.dart';
+import 'package:flutter_mapp_clean_architecture/core/themes/custom_themes/outlined_button_theme.dart';
 import 'package:flutter_mapp_clean_architecture/core/themes/custom_themes/text_field_theme.dart';
 import 'package:flutter_mapp_clean_architecture/core/themes/custom_themes/text_themes.dart';
 
@@ -20,6 +22,8 @@ class GAppTheme {
     appBarTheme: GAppBarTheme.lightAppBarTheme,
     bottomSheetTheme: GBottomSheetTheme.lightBottomSheet,
     inputDecorationTheme: GTextFieldTheme.lightInputDecorationTheme,
+    checkboxTheme: GCheckboxTheme.lightCheckboxTheme,
+    outlinedButtonTheme: GOutlinedButtonTheme.lightOutlinedButtonTheme,
   );
   static ThemeData darkTheme = ThemeData(
     useMaterial3: true,
@@ -32,5 +36,7 @@ class GAppTheme {
     appBarTheme: GAppBarTheme.darkAppBarTheme,
     bottomSheetTheme: GBottomSheetTheme.darkBottomSheet,
     inputDecorationTheme: GTextFieldTheme.darkInputDecorationTheme,
+    checkboxTheme: GCheckboxTheme.darkCheckboxTheme,
+    outlinedButtonTheme: GOutlinedButtonTheme.dorkOutlinedButtonTheme,
   );
 }

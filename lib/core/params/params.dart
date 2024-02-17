@@ -8,3 +8,7 @@ class PokemonParams {
     required this.id,
   });
 }
+
+class UserSignInParams {}
+
+class UserSignUpParams {}

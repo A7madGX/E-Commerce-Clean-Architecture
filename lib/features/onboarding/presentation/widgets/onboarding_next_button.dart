@@ -19,11 +19,14 @@ class OnBoardingNextButton extends StatelessWidget {
         right: GSizes.defaultSpace,
         bottom: GDeviceUtils.getBottomNavigationBarHeight(),
         child: ElevatedButton(
-          onPressed: context.read<OnBoardingProvider>().nextPage,
+          onPressed: () {
+            context.read<OnBoardingProvider>().nextPage(context);
+          },
           style: ElevatedButton.styleFrom(
-              shape: const CircleBorder(),
-              backgroundColor: dark ? GColors.primary : GColors.black,
-              side: BorderSide(color: dark ? GColors.primary : GColors.black)),
+            shape: const CircleBorder(),
+            backgroundColor: dark ? GColors.primary : GColors.black,
+            side: BorderSide(color: dark ? GColors.primary : GColors.black),
+          ),
           child: const Icon(Icons.keyboard_arrow_right_rounded),
         ));
   }
