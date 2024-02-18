@@ -28,12 +28,11 @@ class GTextStrings {
   static const String signIn = 'Sign In';
   static const String createAccount = "Create Account";
   static const String orSignInWith = "OR SIGN IN WITH";
-  static const String orSignUpWith = "or sign up with";
+  static const String orSignUpWith = "OR SIGN UP WITH";
   static const String isAgreeTo = "I agree to";
   static const String privacyPolicy = 'Privacy Policy';
   static const String termsOfUse = "Terms of use";
   static const String verificationCode = 'verification code';
-  static const String resendEmail = "Resend Email";
   static const String resendEmailIn = 'Resend email in';
 
   // Authentication Messages Text
@@ -46,11 +45,16 @@ class GTextStrings {
   static const String changeYourPasswordTitle = "Password Reset Email Sent";
   static const String changeYourPasswordSubTitle =
       "Your Account Security is Our Priority! We've Sent You a Secure Link to Safely Change Your Password and Keep Your Account Protected.";
-  static const String confirmEmail = "verify your email address!";
+  static const String confirmEmail = "Verify your email address!";
   static const String confirmEmailSubtitle =
       "Congratulations! Your Account Awaits: Verify Your Email to Start Shopping and Experience a World of Unrivaled Deals and Personalized Offers.";
   static const String emailNotReceived = "Didn't get the email? Check your junk/span or resend it.";
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubTitle =
       "Welcome to Your Ultimate Shopping Destinations: Your Account is Created, Unleash the Jay of Seamless Online Shopping!";
+
+  // Button Texts
+  static const String continueBtn = 'Continue';
+  static const String cancelBtn = 'Cancel';
+  static const String resendEmailBtn = "Resend Email";
 }

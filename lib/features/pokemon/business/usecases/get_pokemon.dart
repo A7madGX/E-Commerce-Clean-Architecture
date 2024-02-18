@@ -1,6 +1,7 @@
 import 'package:dartz/dartz.dart';
-import '../../../../../core/errors/failure.dart';
+
 import '../../../../core/params/params.dart';
+import '../../../../core/responses/errors/failure.dart';
 import '../entities/pokemon_entity.dart';
 import '../repositories/pokemon_repository.dart';
 

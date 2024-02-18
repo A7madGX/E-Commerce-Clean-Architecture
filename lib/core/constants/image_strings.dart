@@ -19,4 +19,7 @@ class GImageString {
   static const onboardingImage1 = 'assets/images/onboarding_images/boarding_image1.json';
   static const onboardingImage2 = 'assets/images/onboarding_images/boarding_image2.json';
   static const onboardingImage3 = 'assets/images/onboarding_images/boarding_image3.json';
+
+  static const emailVerificationImage = 'assets/images/email_images/email_verification.json';
+  static const emailVerifiedImage = 'assets/images/email_images/email_verified.json';
 }

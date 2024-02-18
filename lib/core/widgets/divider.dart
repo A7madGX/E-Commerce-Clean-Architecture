@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 
-import '../../../../core/constants/colors.dart';
-import '../../../../core/constants/texts.dart';
-import '../../../../core/helpers/helper_functions.dart';
+import '../constants/colors.dart';
+import '../helpers/helper_functions.dart';
 
-class SignInDivider extends StatelessWidget {
-  const SignInDivider({
+class DividerWithLabel extends StatelessWidget {
+  final String label;
+  const DividerWithLabel({
     super.key,
+    required this.label,
   });
 
   @override
@@ -22,7 +23,7 @@ class SignInDivider extends StatelessWidget {
               endIndent: 5),
         ),
         Text(
-          GTextStrings.orSignInWith,
+          label,
           style: Theme.of(context).textTheme.labelMedium,
         ),
         Flexible(

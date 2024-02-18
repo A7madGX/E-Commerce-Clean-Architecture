@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_clean_architecture/core/constants/texts.dart';
 import 'package:flutter_mapp_clean_architecture/core/styles/spacing_styles.dart';
 
-import '../widgets/divider.dart';
+import '../../../../core/widgets/divider.dart';
 import '../widgets/footer.dart';
 import '../widgets/form.dart';
 import '../widgets/header.dart';
@@ -19,7 +20,7 @@ class SignInScreen extends StatelessWidget {
             children: [
               Header(),
               SignInForm(),
-              SignInDivider(),
+              DividerWithLabel(label: GTextStrings.orSignInWith),
               SignInFooter(),
             ],
           ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../../../../../core/errors/failure.dart';
-import 'pokemon_image_widget.dart';
+
+import '../../../../core/responses/errors/failure.dart';
 import '../../business/entities/pokemon_entity.dart';
 import '../providers/pokemon_provider.dart';
+import 'pokemon_image_widget.dart';
 
 class PokemonWidget extends StatelessWidget {
   const PokemonWidget({Key? key}) : super(key: key);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_clean_architecture/core/widgets/text_field.dart';
 
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/constants/texts.dart';
@@ -21,30 +22,24 @@ class _SignInFormState extends State<SignInForm> {
         padding: const EdgeInsets.symmetric(vertical: GSizes.spaceBtwSections),
         child: Column(
           children: [
-            TextFormField(
-              decoration: const InputDecoration(
-                  prefixIcon: Icon(
-                    Icons.email_outlined,
-                  ),
-                  labelText: GTextStrings.email),
-            ),
+            const GTextField(label: GTextStrings.email, prefixIcon: Icon(Icons.email_outlined)),
             const SizedBox(
               height: GSizes.spaceBtwInputFields,
             ),
-            TextFormField(
+            GTextField(
+              label: GTextStrings.password,
+              prefixIcon: const Icon(
+                Icons.lock_outline_rounded,
+              ),
               obscureText: !isVisible,
-              decoration: InputDecoration(
-                prefixIcon: const Icon(
-                  Icons.lock_outline_rounded,
-                ),
-                labelText: GTextStrings.password,
-                suffixIcon: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      isVisible = !isVisible;
-                    });
-                  },
-                  child: Icon(isVisible ? Icons.visibility_rounded : Icons.visibility_off_rounded),
+              suffixIcon: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    isVisible = !isVisible;
+                  });
+                },
+                child: Icon(
+                  isVisible ? Icons.visibility_rounded : Icons.visibility_off_rounded,
                 ),
               ),
             ),
@@ -89,7 +84,9 @@ class _SignInFormState extends State<SignInForm> {
             SizedBox(
               width: double.infinity,
               child: OutlinedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/signUp');
+                },
                 child: const Text(GTextStrings.createAccount),
               ),
             )

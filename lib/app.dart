@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/email_verification.dart';
 import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/sigin_page.dart';
+import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/signup_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:flutter_mapp_clean_architecture/features/onboarding/presentation/providers/onboarding_provider.dart';
 import 'package:provider/provider.dart';
@@ -39,6 +41,8 @@ class GApp extends StatelessWidget {
         routes: {
           '/onBoarding': (context) => const OnBoardingScreen(),
           '/signIn': (context) => const SignInScreen(),
+          '/signUp': (context) => const SignUpScreen(),
+          '/emailVerification': (context) => const EmailVerificationScreen(),
         },
       ),
     );
