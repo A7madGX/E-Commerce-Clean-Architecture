@@ -44,12 +44,20 @@ class SuccessScreen extends StatelessWidget {
               height: GSizes.spaceBtwSections,
             ),
             ElevatedButton(
-              onPressed: () {},
-              child: Text(success.textBtn),
+              onPressed: () {
+                success.onContinue();
+              },
+              child: Text(success.labelButton),
             ),
             const SizedBox(
-              height: GSizes.xs,
+              height: GSizes.sm,
             ),
+            success.secondaryLabelButton != null
+                ? TextButton(
+                    onPressed: () {},
+                    child: Text(success.secondaryLabelButton!),
+                  )
+                : const SizedBox.shrink()
           ],
         ),
       ),

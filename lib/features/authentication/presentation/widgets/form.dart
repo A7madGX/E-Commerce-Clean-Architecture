@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mapp_clean_architecture/core/widgets/text_field.dart';
+import 'package:iconsax/iconsax.dart';
 
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/constants/texts.dart';
@@ -22,14 +23,17 @@ class _SignInFormState extends State<SignInForm> {
         padding: const EdgeInsets.symmetric(vertical: GSizes.spaceBtwSections),
         child: Column(
           children: [
-            const GTextField(label: GTextStrings.email, prefixIcon: Icon(Icons.email_outlined)),
+            const GTextField(
+              label: GTextStrings.email,
+              prefixIcon: Icon(Iconsax.direct_right),
+            ),
             const SizedBox(
               height: GSizes.spaceBtwInputFields,
             ),
             GTextField(
               label: GTextStrings.password,
               prefixIcon: const Icon(
-                Icons.lock_outline_rounded,
+                Iconsax.password_check,
               ),
               obscureText: !isVisible,
               suffixIcon: GestureDetector(
@@ -63,7 +67,9 @@ class _SignInFormState extends State<SignInForm> {
                   ),
                 ),
                 TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/forgetPassword');
+                  },
                   child: const Text(GTextStrings.forgetPassword),
                 ),
               ],
@@ -74,7 +80,9 @@ class _SignInFormState extends State<SignInForm> {
             SizedBox(
               width: double.infinity,
               child: ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.pushNamed(context, '/skeleton');
+                },
                 child: const Text(GTextStrings.signIn),
               ),
             ),

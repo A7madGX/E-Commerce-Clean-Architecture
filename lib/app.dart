@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/email_verification.dart';
+import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/email_verification_page.dart';
+import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/forget_password_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/sigin_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/authentication/presentation/pages/signup_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/onboarding/presentation/pages/onboarding_screen.dart';
 import 'package:flutter_mapp_clean_architecture/features/onboarding/presentation/providers/onboarding_provider.dart';
+import 'package:flutter_mapp_clean_architecture/features/skeleton/skeleton.dart';
 import 'package:provider/provider.dart';
 
 import 'core/themes/theme.dart';
@@ -43,6 +45,8 @@ class GApp extends StatelessWidget {
           '/signIn': (context) => const SignInScreen(),
           '/signUp': (context) => const SignUpScreen(),
           '/emailVerification': (context) => const EmailVerificationScreen(),
+          '/forgetPassword': (context) => const ForgetPasswordScreen(),
+          '/skeleton': (context) => const Skeleton()
         },
       ),
     );

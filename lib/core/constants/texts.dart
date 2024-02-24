@@ -52,9 +52,12 @@ class GTextStrings {
   static const String yourAccountCreatedTitle = "Your account successfully created!";
   static const String yourAccountCreatedSubTitle =
       "Welcome to Your Ultimate Shopping Destinations: Your Account is Created, Unleash the Jay of Seamless Online Shopping!";
+  static const String homeAppBarTitle = 'Good day for shopping';
+  static const String homeAppBarSubTitle = 'Ahmed Gamil';
 
   // Button Texts
   static const String continueBtn = 'Continue';
+  static const String submitBtn = 'Submit';
   static const String cancelBtn = 'Cancel';
   static const String resendEmailBtn = "Resend Email";
 }

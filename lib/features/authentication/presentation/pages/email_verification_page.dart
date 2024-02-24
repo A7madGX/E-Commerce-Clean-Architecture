@@ -75,8 +75,12 @@ class EmailVerificationScreen extends StatelessWidget {
                         title: GTextStrings.yourAccountCreatedTitle,
                         message: GTextStrings.yourAccountCreatedSubTitle,
                         successImageUrl: GImageString.emailVerifiedImage,
-                        textBtn: GTextStrings.continueBtn,
-                        onBtnPressed: () {},
+                        labelButton: GTextStrings.continueBtn,
+                        onContinue: () {
+                          Navigator.pop(context);
+                          Navigator.pop(context);
+                          Navigator.pop(context);
+                        },
                       ),
                     ),
                   ),
