@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_clean_architecture/core/styles/spacing_styles.dart';
 
 import '../../constants/colors.dart';
 import '../../constants/sizes.dart';
@@ -9,6 +10,7 @@ class GTextFieldTheme {
     errorMaxLines: 2,
     prefixIconColor: GColors.darkGrey,
     suffixIconColor: GColors.darkGrey,
+    contentPadding: GSpacingStyles.paddingInTextFields,
     // constraints: const BoxConstraints.expand(height: 14),
     labelStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.black),
     hintStyle: const TextStyle().copyWith(fontSize: 14, color: Colors.black),
@@ -35,6 +37,8 @@ class GTextFieldTheme {
     errorMaxLines: 2,
     prefixIconColor: GColors.darkGrey,
     suffixIconColor: GColors.darkGrey,
+    contentPadding: GSpacingStyles.paddingInTextFields,
+
     // constraints: const BoxConstraints.expand(height: 14),
     labelStyle: const TextStyle().copyWith(fontSize: 14, color: GColors.white),
     hintStyle: const TextStyle().copyWith(fontSize: 14, color: GColors.white),

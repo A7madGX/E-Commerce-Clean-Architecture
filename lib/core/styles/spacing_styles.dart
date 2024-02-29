@@ -20,4 +20,6 @@ class GSpacingStyles {
     right: GSizes.defaultSpace,
     bottom: GSizes.defaultSpace,
   );
+
+  static EdgeInsetsGeometry paddingInTextFields = const EdgeInsets.symmetric(vertical: GSizes.md);
 }

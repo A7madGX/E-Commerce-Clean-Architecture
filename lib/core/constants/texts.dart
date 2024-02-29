@@ -60,4 +60,7 @@ class GTextStrings {
   static const String submitBtn = 'Submit';
   static const String cancelBtn = 'Cancel';
   static const String resendEmailBtn = "Resend Email";
+
+  // Store
+  static const String store = 'Store';
 }
