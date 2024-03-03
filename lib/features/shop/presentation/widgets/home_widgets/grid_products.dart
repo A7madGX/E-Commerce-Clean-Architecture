@@ -17,7 +17,7 @@ class GGridProduct extends StatelessWidget {
       crossAxisCount: 2,
       crossAxisSpacing: GSizes.gridViewSpacing,
       mainAxisSpacing: GSizes.gridViewSpacing,
-      childAspectRatio: 0.55,
+      childAspectRatio: 0.57,
       children: [for (var i = 0; i < 50; i++) const ProductVerticalTile()],
     );
   }

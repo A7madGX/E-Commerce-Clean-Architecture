@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/favourites_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/home_page.dart';
+import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/profile_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/store_page.dart';
 
 class SelectedPageProvider extends ChangeNotifier {
-  List<Widget> pages = [
-    const HomePage(),
-    const StorePage(),
-    const Center(child: Text('3')),
-    const Center(child: Text('4'))
+  List<Widget> pages = const [
+    HomePage(),
+    StorePage(),
+    FavouritesPage(),
+    ProfilePage(),
   ];
 
   int selectedPage = 0;

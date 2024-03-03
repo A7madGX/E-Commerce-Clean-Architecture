@@ -63,4 +63,13 @@ class GTextStrings {
 
   // Store
   static const String store = 'Store';
+
+  // Wishlist
+  static const String wishlist = 'Wishlist';
+
+  // Profile
+  static const String account = 'Account';
+  static const String profileTitle = 'Coding with G';
+  static const String profileEmail = 'rabiahmed2001@yahoo.com';
+  static const String accountSettings = 'Account Settings';
 }

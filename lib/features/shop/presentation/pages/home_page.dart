@@ -3,9 +3,14 @@ import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widge
 
 import '../widgets/home_widgets/bottom_section.dart';
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     return const CustomScrollView(
@@ -20,4 +25,7 @@ class HomePage extends StatelessWidget {
       ],
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }

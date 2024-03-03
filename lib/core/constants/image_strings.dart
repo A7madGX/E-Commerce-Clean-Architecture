@@ -158,4 +158,7 @@ class GImageString {
   static const String productImage75 = "assets/images/products/slipper-product-2.png";
   static const String productImage76 = "assets/images/products/slipper-product-3.png";
   static const String productImage77 = "assets/images/products/slipper-product.png";
+
+  // User
+  static const String me = 'assets/images/users/discord.jpg';
 }

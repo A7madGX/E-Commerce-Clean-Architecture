@@ -3,6 +3,7 @@ import 'package:flutter_mapp_clean_architecture/core/constants/colors.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/sizes.dart';
 import 'package:flutter_mapp_clean_architecture/core/helpers/helper_functions.dart';
 import 'package:flutter_mapp_clean_architecture/core/styles/shadow_styles.dart';
+import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/product_tile_details.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/thumbnail_with_tag.dart';
 import 'package:iconsax/iconsax.dart';
 
@@ -15,7 +16,6 @@ class ProductVerticalTile extends StatelessWidget {
     return GestureDetector(
       onTap: () {},
       child: Container(
-        width: 180,
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
             color: dark ? GColors.darkerGrey : GColors.light,
@@ -23,75 +23,13 @@ class ProductVerticalTile extends StatelessWidget {
               GSizes.productImageRadius,
             ),
             boxShadow: [GShadowStyle.verticalProductShadow]),
-        child: Column(
+        child: const Column(
           children: [
-            GThumbnailWithTag(dark: dark),
-            const Expanded(child: GDetails()),
+            GThumbnailWithTag(),
+            Expanded(child: GDetails()),
           ],
         ),
       ),
-    );
-  }
-}
-
-class GDetails extends StatelessWidget {
-  const GDetails({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.only(
-        top: GSizes.sm,
-        left: GSizes.sm,
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ProductTitle(),
-          SizedBox(height: GSizes.spaceBtwItems / 2),
-          ProductBrand(),
-          Spacer(),
-          PriceAndAdd()
-        ],
-      ),
-    );
-  }
-}
-
-class PriceAndAdd extends StatelessWidget {
-  const PriceAndAdd({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          '\$35.5',
-          style: Theme.of(context).textTheme.headlineMedium,
-          overflow: TextOverflow.ellipsis,
-          maxLines: 1,
-        ),
-        Container(
-          alignment: Alignment.center,
-          width: GSizes.iconLg * 1.2,
-          height: GSizes.iconLg * 1.2,
-          decoration: const BoxDecoration(
-            color: GColors.dark,
-            borderRadius: BorderRadius.only(
-                topLeft: Radius.circular(GSizes.cardRadiusMd),
-                bottomRight: Radius.circular(GSizes.productImageRadius)),
-          ),
-          child: const Icon(
-            Iconsax.add,
-            color: GColors.white,
-          ),
-        )
-      ],
     );
   }
 }

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mapp_clean_architecture/core/helpers/helper_functions.dart';
 import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/constants/colors.dart';
@@ -9,10 +10,7 @@ import '../../../../../core/widgets/image_container.dart';
 class GThumbnailWithTag extends StatefulWidget {
   const GThumbnailWithTag({
     super.key,
-    required this.dark,
   });
-
-  final bool dark;
 
   @override
   State<GThumbnailWithTag> createState() => _GThumbnailWithTagState();
@@ -22,11 +20,13 @@ class _GThumbnailWithTagState extends State<GThumbnailWithTag> {
   bool isFavorite = false;
   @override
   Widget build(BuildContext context) {
+    final dark = GHelperFunctions.isDarkMode(context);
+
     return Stack(
       children: [
         GImageContainer(
           imageUrl: GImageString.productImage5,
-          backgroundColor: widget.dark ? GColors.dark : GColors.light,
+          backgroundColor: dark ? GColors.dark : GColors.light,
           padding: const EdgeInsets.all(GSizes.sm),
           borderRadius: GSizes.productImageRadius,
         ),
@@ -48,8 +48,7 @@ class _GThumbnailWithTagState extends State<GThumbnailWithTag> {
               ),
               Container(
                 decoration: BoxDecoration(
-                  color:
-                      widget.dark ? GColors.black.withOpacity(0.9) : GColors.white.withOpacity(0.9),
+                  color: dark ? GColors.black.withOpacity(0.9) : GColors.white.withOpacity(0.9),
                   shape: BoxShape.circle,
                 ),
                 child: IconButton(
