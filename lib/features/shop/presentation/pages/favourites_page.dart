@@ -35,7 +35,7 @@ class _FavouritesPageState extends State<FavouritesPage> {
               childAspectRatio: 0.57,
               children: [for (var i = 0; i < 20; i++) const ProductVerticalTile()],
             ),
-          )
+          ),
         ],
       ),
     );
