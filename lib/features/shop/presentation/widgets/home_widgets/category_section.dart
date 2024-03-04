@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_mapp_clean_architecture/core/constants/animations.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/image_strings.dart';
 
 import '../../../../../core/constants/sizes.dart';
@@ -25,8 +27,11 @@ class GCategorySection extends StatelessWidget {
     };
     return Column(
       children: [
-        const GHeaderTitle(
-          header: 'Popular Categories',
+        Animate(
+          effects: GAnimations.titleAnimation,
+          child: const GHeaderTitle(
+            header: 'Popular Categories',
+          ),
         ),
         const SizedBox(
           height: GSizes.spaceBtwItems,
@@ -35,14 +40,18 @@ class GCategorySection extends StatelessWidget {
           scrollDirection: Axis.horizontal,
           clipBehavior: Clip.none,
           child: Row(
-            children: [
-              for (var category in categories.entries) ...[
-                CategoryWithLabel(category: category),
-                const SizedBox(
-                  width: GSizes.spaceBtwItems,
-                )
+            children: AnimateList(
+              interval: 150.ms,
+              effects: GAnimations.categoryListAnimation,
+              children: [
+                for (var category in categories.entries) ...[
+                  CategoryWithLabel(category: category),
+                  const SizedBox(
+                    width: GSizes.spaceBtwItems,
+                  )
+                ],
               ],
-            ],
+            ),
           ),
         )
       ],

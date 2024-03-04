@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
 
-class GMenuTile extends StatelessWidget {
+class GMenuTile extends StatefulWidget {
   final String title;
   final String subtitle;
   final IconData icon;
@@ -19,24 +19,34 @@ class GMenuTile extends StatelessWidget {
   });
 
   @override
+  State<GMenuTile> createState() => _GMenuTileState();
+}
+
+class _GMenuTileState extends State<GMenuTile> with AutomaticKeepAliveClientMixin {
+  @override
   Widget build(BuildContext context) {
     return ListTile(
       splashColor: GColors.primary.withOpacity(0.5),
-      onTap: onTap,
+      onTap: widget.onTap,
       leading: Icon(
-        icon,
+        widget.icon,
         size: GSizes.iconLmd,
         color: GColors.primary,
       ),
       title: Text(
-        title,
+        widget.title,
         style: Theme.of(context).textTheme.titleMedium,
       ),
       subtitle: Text(
-        subtitle,
+        widget.subtitle,
         style: Theme.of(context).textTheme.labelMedium,
       ),
-      trailing: trailing,
+      trailing: widget.trailing,
     );
+  }
+
+  @override
+  bool get wantKeepAlive {
+    return true;
   }
 }

@@ -5,11 +5,11 @@ import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/store_page.dart';
 
 class SelectedPageProvider extends ChangeNotifier {
-  List<Widget> pages = const [
-    HomePage(),
-    StorePage(),
-    FavouritesPage(),
-    ProfilePage(),
+  List<Widget> pages = [
+    const HomePage(),
+    const StorePage(),
+    const FavouritesPage(),
+    const ProfilePage(),
   ];
 
   int selectedPage = 0;

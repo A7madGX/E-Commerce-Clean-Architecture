@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> with AutomaticKeepAliveClientMixin 
           automaticallyImplyLeading: false,
           collapsedHeight: 70,
         ),
-        SliverToBoxAdapter(child: BottomSection()),
+        BottomSection(),
       ],
     );
   }

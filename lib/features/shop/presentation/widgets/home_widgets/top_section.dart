@@ -1,5 +1,6 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/sizes.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/app_bar.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/primary_header_container.dart';
@@ -18,7 +19,6 @@ class TopSection extends StatelessWidget {
     return GPrimaryHeaderContainer(
       child: ListView(
         physics: const NeverScrollableScrollPhysics(),
-        shrinkWrap: true,
         children: [
           GCustomAppBar(
             title: Column(
@@ -27,11 +27,11 @@ class TopSection extends StatelessWidget {
                 Text(
                   GTextStrings.homeAppBarTitle,
                   style: Theme.of(context).textTheme.labelMedium!.apply(color: GColors.grey),
-                ),
+                ).animate(delay: 1000.ms).slide(duration: 500.ms, begin: const Offset(0, -3)),
                 Text(
                   GTextStrings.homeAppBarSubTitle,
                   style: Theme.of(context).textTheme.headlineSmall!.apply(color: GColors.white),
-                ),
+                ).animate(delay: 2000.ms).fade(duration: 500.ms),
               ],
             ),
             showBackArrow: false,

@@ -1,5 +1,7 @@
 import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_mapp_clean_architecture/core/constants/animations.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/sizes.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/texts.dart';
 import 'package:flutter_mapp_clean_architecture/core/helpers/helper_functions.dart';
@@ -79,7 +81,11 @@ class StorePage extends StatelessWidget {
                         crossAxisSpacing: GSizes.gridViewSpacing,
                         mainAxisSpacing: GSizes.gridViewSpacing,
                         childAspectRatio: 2,
-                        children: [for (var i = 0; i < 4; i++) const GBrandTile()],
+                        children: AnimateList(
+                          interval: 50.ms,
+                          effects: GAnimations.gridAnimation,
+                          children: [for (var i = 0; i < 4; i++) const GBrandTile()],
+                        ),
                       ),
                     ],
                   ),

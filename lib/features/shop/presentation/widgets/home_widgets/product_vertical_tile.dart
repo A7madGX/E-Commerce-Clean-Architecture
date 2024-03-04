@@ -7,9 +7,15 @@ import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widge
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/thumbnail_with_tag.dart';
 import 'package:iconsax/iconsax.dart';
 
-class ProductVerticalTile extends StatelessWidget {
+class ProductVerticalTile extends StatefulWidget {
   const ProductVerticalTile({super.key});
 
+  @override
+  State<ProductVerticalTile> createState() => _ProductVerticalTileState();
+}
+
+class _ProductVerticalTileState extends State<ProductVerticalTile>
+    with AutomaticKeepAliveClientMixin {
   @override
   Widget build(BuildContext context) {
     final dark = GHelperFunctions.isDarkMode(context);
@@ -32,6 +38,9 @@ class ProductVerticalTile extends StatelessWidget {
       ),
     );
   }
+
+  @override
+  bool get wantKeepAlive => true;
 }
 
 class ProductBrand extends StatelessWidget {

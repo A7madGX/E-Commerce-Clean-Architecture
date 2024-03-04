@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
+import 'package:flutter_mapp_clean_architecture/core/constants/animations.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/sizes.dart';
 import 'package:flutter_mapp_clean_architecture/core/widgets/header.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/slider_bottom.dart';
@@ -10,23 +12,36 @@ class BottomSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return SliverPadding(
       padding: const EdgeInsets.symmetric(
           horizontal: GSizes.defaultSpace, vertical: GSizes.defaultSpace / 2),
-      child: Column(
-        children: [
-          const SliderBottomSection(),
-          const SizedBox(height: GSizes.spaceBtwSections),
-          GHeaderTitle(
-            header: 'Popular Products',
-            hasButton: true,
-            buttonText: 'View all',
-            onClick: () {},
+      sliver: SliverMainAxisGroup(slivers: [
+        const SliverToBoxAdapter(
+          child: SliderBottomSection(),
+        ),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: GSizes.spaceBtwSections,
           ),
-          const SizedBox(height: GSizes.spaceBtwItems),
-          const GGridProduct(),
-        ],
-      ),
+        ),
+        SliverToBoxAdapter(
+          child: Animate(
+            effects: GAnimations.titleAnimation,
+            child: GHeaderTitle(
+              header: 'Popular Products',
+              hasButton: true,
+              buttonText: 'View all',
+              onClick: () {},
+            ),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: SizedBox(
+            height: GSizes.spaceBtwItems,
+          ),
+        ),
+        const GGridProduct()
+      ]),
     );
   }
 }

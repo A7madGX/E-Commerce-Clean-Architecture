@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/app_bar.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../../../core/constants/animations.dart';
 import '../../../../core/constants/sizes.dart';
 import '../../../../core/constants/texts.dart';
 import '../widgets/home_widgets/product_vertical_tile.dart';
@@ -33,7 +35,11 @@ class _FavouritesPageState extends State<FavouritesPage> {
               crossAxisSpacing: GSizes.gridViewSpacing,
               mainAxisSpacing: GSizes.gridViewSpacing,
               childAspectRatio: 0.57,
-              children: [for (var i = 0; i < 20; i++) const ProductVerticalTile()],
+              children: AnimateList(
+                interval: 50.ms,
+                effects: GAnimations.gridAnimation,
+                children: [for (var i = 0; i < 20; i++) const ProductVerticalTile()],
+              ),
             ),
           ),
         ],
