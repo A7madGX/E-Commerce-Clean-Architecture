@@ -35,7 +35,6 @@ class GHeaderTitle extends StatelessWidget {
                 ),
                 child: Text(
                   buttonText ?? 'Submit',
-                  style: Theme.of(context).textTheme.labelMedium,
                 ),
               )
             : const SizedBox.shrink(),

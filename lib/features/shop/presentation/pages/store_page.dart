@@ -46,7 +46,7 @@ class StorePage extends StatelessWidget {
           headerSliverBuilder: (_, isInnerBoxScrollable) {
             return [
               SliverAppBar(
-                backgroundColor: dark ? GColors.dark : GColors.light,
+                backgroundColor: dark ? GColors.black : GColors.white,
                 expandedHeight: 400,
                 pinned: true,
                 floating: true,
@@ -59,8 +59,8 @@ class StorePage extends StatelessWidget {
                     children: [
                       const SizedBox(height: GSizes.spaceBtwSections / 2),
                       GSearchField(
-                        border: BorderSide(color: GColors.darkGrey.withOpacity(0.5)),
-                        transparent: false,
+                        border: const BorderSide(color: GColors.grey),
+                        transparent: true,
                         searchIcon: const Icon(Iconsax.search_normal),
                         hintText: 'Search in store',
                         controller: TextEditingController(),
@@ -82,6 +82,7 @@ class StorePage extends StatelessWidget {
                         mainAxisSpacing: GSizes.gridViewSpacing,
                         childAspectRatio: 2,
                         children: AnimateList(
+                          delay: 200.ms,
                           interval: 50.ms,
                           effects: GAnimations.gridAnimation,
                           children: [for (var i = 0; i < 4; i++) const GBrandTile()],

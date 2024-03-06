@@ -3,23 +3,23 @@ import 'package:flutter_mapp_clean_architecture/core/constants/colors.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/sizes.dart';
 import 'package:flutter_mapp_clean_architecture/core/helpers/helper_functions.dart';
 
-class GIconContainer extends StatelessWidget {
+class GCircularImageContainer extends StatelessWidget {
   final double? radius;
   final double width;
   final double height;
   final Color? backgroundColor;
   final Color? overlayColor;
-  final String iconUrl;
+  final String imageUrl;
   final BoxFit fit;
   final double padding;
   final bool isNetworkImage;
-  const GIconContainer({
+  const GCircularImageContainer({
     super.key,
     this.width = 56,
     this.height = 56,
     this.backgroundColor,
     this.overlayColor,
-    required this.iconUrl,
+    required this.imageUrl,
     this.fit = BoxFit.cover,
     this.padding = GSizes.md,
     this.isNetworkImage = false,
@@ -41,12 +41,12 @@ class GIconContainer extends StatelessWidget {
       ),
       child: isNetworkImage
           ? Image.network(
-              iconUrl,
+              imageUrl,
               fit: fit,
               color: overlayColor,
             )
           : Image.asset(
-              iconUrl,
+              imageUrl,
               fit: fit,
               color: overlayColor,
             ),

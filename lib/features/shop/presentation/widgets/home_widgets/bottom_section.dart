@@ -27,6 +27,7 @@ class BottomSection extends StatelessWidget {
         SliverToBoxAdapter(
           child: Animate(
             effects: GAnimations.titleAnimation,
+            delay: 500.ms,
             child: GHeaderTitle(
               header: 'Popular Products',
               hasButton: true,

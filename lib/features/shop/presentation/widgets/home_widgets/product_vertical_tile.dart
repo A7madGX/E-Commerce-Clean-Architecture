@@ -7,6 +7,8 @@ import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widge
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/thumbnail_with_tag.dart';
 import 'package:iconsax/iconsax.dart';
 
+import '../../pages/product_details_page.dart';
+
 class ProductVerticalTile extends StatefulWidget {
   const ProductVerticalTile({super.key});
 
@@ -20,11 +22,14 @@ class _ProductVerticalTileState extends State<ProductVerticalTile>
   Widget build(BuildContext context) {
     final dark = GHelperFunctions.isDarkMode(context);
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (context) => const ProductDetailsPage()));
+      },
       child: Container(
         padding: const EdgeInsets.all(1),
         decoration: BoxDecoration(
-            color: dark ? GColors.darkerGrey : GColors.light,
+            color: dark ? GColors.darkerGrey : GColors.white,
             borderRadius: BorderRadius.circular(
               GSizes.productImageRadius,
             ),

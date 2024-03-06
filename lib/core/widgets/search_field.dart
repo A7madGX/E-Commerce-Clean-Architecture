@@ -46,8 +46,8 @@ class GSearchField extends StatelessWidget {
         fillColor: transparent
             ? null
             : dark
-                ? GColors.dark
-                : GColors.light,
+                ? GColors.black
+                : GColors.white,
       ),
     );
   }

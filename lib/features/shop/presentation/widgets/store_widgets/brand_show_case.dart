@@ -18,7 +18,7 @@ class GBrandShowCase extends StatelessWidget {
       padding: const EdgeInsets.all(GSizes.md),
       decoration: BoxDecoration(
         color: Colors.transparent,
-        border: Border.all(color: GColors.darkerGrey),
+        border: Border.all(color: GColors.grey),
         borderRadius: BorderRadius.circular(GSizes.cardRadiusLg),
       ),
       child: Column(

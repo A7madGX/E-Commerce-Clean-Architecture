@@ -23,6 +23,6 @@ class GAnimations {
     SlideEffect(duration: 200.ms, begin: const Offset(1.2, 0), end: const Offset(0, 0))
   ];
   static List<Effect<dynamic>> categoryListAnimation = [
-    SlideEffect(duration: 150.ms, begin: const Offset(7, 0), end: const Offset(0, 0))
+    SlideEffect(duration: 100.ms, begin: const Offset(7, 0), end: const Offset(0, 0))
   ];
 }

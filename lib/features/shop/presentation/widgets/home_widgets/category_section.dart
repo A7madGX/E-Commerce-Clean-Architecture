@@ -28,6 +28,7 @@ class GCategorySection extends StatelessWidget {
     return Column(
       children: [
         Animate(
+          delay: 500.ms,
           effects: GAnimations.titleAnimation,
           child: const GHeaderTitle(
             header: 'Popular Categories',
@@ -41,7 +42,8 @@ class GCategorySection extends StatelessWidget {
           clipBehavior: Clip.none,
           child: Row(
             children: AnimateList(
-              interval: 150.ms,
+              delay: 200.ms,
+              interval: 50.ms,
               effects: GAnimations.categoryListAnimation,
               children: [
                 for (var category in categories.entries) ...[

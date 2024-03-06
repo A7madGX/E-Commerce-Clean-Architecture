@@ -36,6 +36,7 @@ class GImageContainer extends StatelessWidget {
         duration: const Duration(milliseconds: 500),
         padding: padding,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(borderRadius),
           color: backgroundColor,
           border: boxBorder,
         ),

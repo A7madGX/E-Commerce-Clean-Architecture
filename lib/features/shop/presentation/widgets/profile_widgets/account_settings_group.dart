@@ -39,7 +39,7 @@ class AccountSettingsGroup extends StatelessWidget {
         ),
         sliver: SliverList.list(
           children: AnimateList(
-            interval: 100.ms,
+            interval: 50.ms,
             effects: GAnimations.listAnimation,
             children: [
               GMenuTile(

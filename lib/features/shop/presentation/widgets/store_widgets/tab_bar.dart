@@ -12,7 +12,7 @@ class GTabBar extends StatelessWidget implements PreferredSizeWidget {
   Widget build(BuildContext context) {
     final dark = GHelperFunctions.isDarkMode(context);
     return Material(
-      color: dark ? GColors.dark : GColors.light,
+      color: dark ? GColors.black : GColors.white,
       child: TabBar(
         indicatorColor: GColors.primary,
         labelPadding: const EdgeInsets.all(GSizes.spaceBtwItems / 1.5),

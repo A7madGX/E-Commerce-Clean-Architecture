@@ -26,15 +26,15 @@ class GBrandTile extends StatelessWidget {
       child: Container(
         padding: padding ?? const EdgeInsets.all(GSizes.md),
         decoration: BoxDecoration(
-          border: hasBorder ? Border.all(color: GColors.darkGrey.withOpacity(0.5), width: 2) : null,
+          border: hasBorder ? Border.all(color: GColors.grey) : null,
           borderRadius: BorderRadius.circular(GSizes.md),
         ),
         child: Row(
           children: [
             Flexible(
-              child: GIconContainer(
+              child: GCircularImageContainer(
                 fit: BoxFit.contain,
-                iconUrl: GImageString.nikeLogo,
+                imageUrl: GImageString.nikeLogo,
                 padding: GSizes.xs,
                 overlayColor: GHelperFunctions.isDarkMode(context) ? GColors.white : GColors.black,
                 backgroundColor: Colors.transparent,

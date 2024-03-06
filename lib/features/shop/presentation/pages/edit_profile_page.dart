@@ -29,9 +29,9 @@ class EditProfilePage extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: [
-              const GIconContainer(
+              const GCircularImageContainer(
                 radius: GSizes.iconXlg,
-                iconUrl: GImageString.me,
+                imageUrl: GImageString.me,
                 padding: 0,
               ),
               TextButton(
@@ -64,8 +64,8 @@ class EditProfilePage extends StatelessWidget {
               const SizedBox(height: GSizes.spaceBtwItems),
 
               // Personal Info
-              GHeaderTitle(header: 'Personal Information'),
-              SizedBox(height: GSizes.spaceBtwItems),
+              const GHeaderTitle(header: 'Personal Information'),
+              const SizedBox(height: GSizes.spaceBtwItems),
 
               ProfileInfoItem(
                 title: 'User ID',
@@ -101,7 +101,7 @@ class EditProfilePage extends StatelessWidget {
                 onPressed: () {},
                 child: Text(
                   'Close Account',
-                  style: TextStyle().copyWith(color: GColors.error),
+                  style: const TextStyle().copyWith(color: GColors.error),
                 ),
               )
             ],
