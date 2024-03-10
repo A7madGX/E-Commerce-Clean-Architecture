@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/helpers/helper_functions.dart';
+import '../../pages/subcategory_page.dart';
 
 class CategoryWithLabel extends StatelessWidget {
   const CategoryWithLabel({
@@ -16,7 +17,9 @@ class CategoryWithLabel extends StatelessWidget {
     final bool dark = GHelperFunctions.isDarkMode(context);
 
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const SubCategoryPage()));
+      },
       child: Column(
         children: [
           Container(

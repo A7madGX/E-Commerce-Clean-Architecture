@@ -27,6 +27,7 @@ dependencies:
   carousel_slider: ^4.2.1
   flutter_animate: ^4.5.0
   readmore: ^2.2.0
+  flutter_rating_bar: ^4.0.1
 
 dev_dependencies:
   flutter_test:
@@ -45,6 +46,7 @@ flutter:
     - assets/logos/
     - assets/logos/brands/
     - assets/icons/
+    - assets/icons/payment_methods/
     - assets/icons/categories/
   fonts:
     - family: Roboto

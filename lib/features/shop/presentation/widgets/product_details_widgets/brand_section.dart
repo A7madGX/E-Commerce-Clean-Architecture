@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:iconsax/iconsax.dart';
 
 import '../../../../../core/constants/colors.dart';
 import '../../../../../core/constants/image_strings.dart';
@@ -17,10 +16,10 @@ class ProductBrandSection extends StatelessWidget {
     return Row(
       children: [
         Container(
-          padding: const EdgeInsets.only(left: GSizes.xs, right: GSizes.sm),
+          padding: const EdgeInsets.all(GSizes.sm),
           decoration: BoxDecoration(
             color: GHelperFunctions.isDarkMode(context) ? GColors.dark : GColors.light,
-            borderRadius: BorderRadius.circular(GSizes.md),
+            borderRadius: BorderRadius.circular(GSizes.sm),
           ),
           child: Row(
             children: [
@@ -29,9 +28,10 @@ class ProductBrandSection extends StatelessWidget {
                 imageUrl: GImageString.nikeLogo,
                 overlayColor: GHelperFunctions.isDarkMode(context) ? GColors.white : GColors.black,
                 radius: GSizes.iconXs,
-                padding: GSizes.xs,
+                padding: 0,
                 fit: BoxFit.contain,
               ),
+              const SizedBox(width: GSizes.xs),
               Text(
                 'Nike',
                 maxLines: 1,
@@ -41,12 +41,12 @@ class ProductBrandSection extends StatelessWidget {
             ],
           ),
         ),
-        const SizedBox(width: GSizes.xs),
-        const Icon(
-          Iconsax.verify5,
-          color: GColors.primary,
-          size: GSizes.iconXs,
-        )
+        // const SizedBox(width: GSizes.xs),
+        // const Icon(
+        //   Iconsax.verify5,
+        //   color: GColors.primary,
+        //   size: GSizes.iconXs,
+        // )
       ],
     );
   }

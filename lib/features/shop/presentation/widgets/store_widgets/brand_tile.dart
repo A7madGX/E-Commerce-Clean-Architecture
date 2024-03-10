@@ -19,7 +19,7 @@ class GBrandTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      splashColor: GColors.primary,
+      splashColor: GColors.primary.withOpacity(0.5),
       highlightColor: GColors.primary,
       borderRadius: BorderRadius.circular(GSizes.md),
       onTap: () {},

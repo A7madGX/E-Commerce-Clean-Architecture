@@ -8,6 +8,7 @@ class GCircularIcon extends StatelessWidget {
   final Color? backgroundColor;
   final VoidCallback? onTap;
   final double? radius;
+  final double? iconSize;
   const GCircularIcon({
     super.key,
     required this.icon,
@@ -15,6 +16,7 @@ class GCircularIcon extends StatelessWidget {
     this.color,
     this.radius,
     this.backgroundColor,
+    this.iconSize,
   });
 
   @override
@@ -28,6 +30,7 @@ class GCircularIcon extends StatelessWidget {
         icon: Icon(
           icon,
           color: color,
+          size: iconSize,
         ),
       ),
     );

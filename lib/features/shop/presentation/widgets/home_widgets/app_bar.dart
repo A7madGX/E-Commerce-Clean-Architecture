@@ -39,7 +39,10 @@ class GCustomAppBar extends StatelessWidget implements PreferredSizeWidget {
                   Iconsax.arrow_left,
                   color: GHelperFunctions.isDarkMode(context) ? GColors.white : GColors.dark,
                 ),
-                onPressed: leadingOnPressed,
+                onPressed: leadingOnPressed ??
+                    () {
+                      Navigator.of(context).pop();
+                    },
               )
             : (leadingIcon != null)
                 ? IconButton(

@@ -7,6 +7,7 @@ import 'package:flutter_mapp_clean_architecture/core/constants/texts.dart';
 import 'package:flutter_mapp_clean_architecture/core/helpers/helper_functions.dart';
 import 'package:flutter_mapp_clean_architecture/core/widgets/header.dart';
 import 'package:flutter_mapp_clean_architecture/core/widgets/search_field.dart';
+import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/view_all_brands.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/app_bar.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/store_widgets/tab_bar.dart';
 import 'package:iconsax/iconsax.dart';
@@ -70,7 +71,11 @@ class StorePage extends StatelessWidget {
                         header: 'Featured Brands',
                         hasButton: true,
                         buttonText: 'View all',
-                        onClick: () {},
+                        onClick: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(builder: (context) => const ViewAllBrands()),
+                          );
+                        },
                       ),
                       const SizedBox(height: GSizes.spaceBtwItems),
                       GridView.count(

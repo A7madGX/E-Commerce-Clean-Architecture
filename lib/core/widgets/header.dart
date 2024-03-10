@@ -4,6 +4,7 @@ class GHeaderTitle extends StatelessWidget {
   final String header;
   final bool hasButton;
   final String? buttonText;
+  final Color? color;
   final void Function()? onClick;
   const GHeaderTitle({
     super.key,
@@ -11,6 +12,7 @@ class GHeaderTitle extends StatelessWidget {
     this.hasButton = false,
     this.buttonText,
     this.onClick,
+    this.color,
   });
 
   @override
@@ -20,7 +22,7 @@ class GHeaderTitle extends StatelessWidget {
       children: [
         Text(
           header,
-          style: Theme.of(context).textTheme.headlineSmall,
+          style: Theme.of(context).textTheme.headlineSmall!.apply(color: color),
           maxLines: 1,
           overflow: TextOverflow.ellipsis,
         ),

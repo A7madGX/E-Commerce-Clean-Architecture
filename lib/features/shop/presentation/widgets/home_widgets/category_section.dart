@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/animations.dart';
+import 'package:flutter_mapp_clean_architecture/core/constants/colors.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/image_strings.dart';
 
 import '../../../../../core/constants/sizes.dart';
@@ -32,6 +33,7 @@ class GCategorySection extends StatelessWidget {
           effects: GAnimations.titleAnimation,
           child: const GHeaderTitle(
             header: 'Popular Categories',
+            color: GColors.white,
           ),
         ),
         const SizedBox(

@@ -39,6 +39,7 @@ class ProductDetailsPage extends StatelessWidget {
                   ProductDescriptionSection(),
                   SizedBox(height: GSizes.spaceBtwItems),
                   Divider(),
+                  SizedBox(height: GSizes.spaceBtwItems),
                   ProductReviewSection(),
                   SizedBox(height: GSizes.spaceBtwSections),
                 ],

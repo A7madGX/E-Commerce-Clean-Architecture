@@ -18,7 +18,7 @@ class PriceAndAdd extends StatelessWidget {
             alignment: Alignment.centerLeft,
             fit: BoxFit.scaleDown,
             child: Text(
-              '\$35.5',
+              '\$35.5 - \$55.2',
               style: Theme.of(context).textTheme.headlineSmall,
             ),
           ),

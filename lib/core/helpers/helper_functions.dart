@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
 class GHelperFunctions {
@@ -64,4 +66,7 @@ class GHelperFunctions {
       return null;
     }
   }
+
+  static String getUniqueAvatarUrl() =>
+      'https://avatar.iran.liara.run/public/${Random().nextInt(100)}';
 }

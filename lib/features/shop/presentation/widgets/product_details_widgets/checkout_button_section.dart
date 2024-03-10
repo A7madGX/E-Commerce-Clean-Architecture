@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../pages/checkout_page.dart';
+
 class CheckoutButtonSection extends StatelessWidget {
   const CheckoutButtonSection({
     super.key,
@@ -9,7 +11,12 @@ class CheckoutButtonSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton(onPressed: () {}, child: const Text('Checkout')),
+      child: ElevatedButton(
+          onPressed: () {
+            Navigator.of(context)
+                .push(MaterialPageRoute(builder: (context) => const CheckoutPage()));
+          },
+          child: const Text('Checkout')),
     );
   }
 }

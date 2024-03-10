@@ -17,18 +17,21 @@ class GChoiceChip extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isColor = GHelperFunctions.getColor(label) != null;
-    return ChoiceChip(
-      label: isColor ? const SizedBox() : Text(label),
-      selected: selected,
-      onSelected: onSelected,
-      labelStyle: TextStyle(color: selected ? GColors.white : null),
-      avatar: isColor
-          ? CircleAvatar(radius: 25, backgroundColor: GHelperFunctions.getColor(label)!)
-          : null,
-      labelPadding: isColor ? const EdgeInsets.all(0) : null,
-      padding: isColor ? const EdgeInsets.all(0) : null,
-      shape: isColor ? const CircleBorder() : null,
-      backgroundColor: isColor ? GHelperFunctions.getColor(label)! : null,
+    return Theme(
+      data: Theme.of(context).copyWith(canvasColor: Colors.transparent),
+      child: ChoiceChip(
+        label: isColor ? const SizedBox() : Text(label),
+        selected: selected,
+        onSelected: onSelected,
+        labelStyle: TextStyle(color: selected ? GColors.white : null),
+        avatar: isColor
+            ? CircleAvatar(radius: 25, backgroundColor: GHelperFunctions.getColor(label)!)
+            : null,
+        labelPadding: isColor ? const EdgeInsets.all(0) : null,
+        padding: isColor ? const EdgeInsets.all(0) : null,
+        shape: isColor ? const CircleBorder() : null,
+        backgroundColor: isColor ? GHelperFunctions.getColor(label)! : null,
+      ),
     );
   }
 }

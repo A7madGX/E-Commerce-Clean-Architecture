@@ -21,7 +21,7 @@ class GGridProduct extends StatelessWidget {
           delay: 200.ms,
           interval: 50.ms,
           effects: GAnimations.gridAnimation,
-          children: [for (var i = 0; i < 50; i++) const ProductVerticalTile()],
+          children: [for (var i = 0; i < 6; i++) const ProductVerticalTile()],
         ));
   }
 }

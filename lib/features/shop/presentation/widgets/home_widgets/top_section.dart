@@ -2,6 +2,7 @@ import 'package:badges/badges.dart' as badges;
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/sizes.dart';
+import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/cart_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/app_bar.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/home_widgets/primary_header_container.dart';
 import 'package:iconsax/iconsax.dart';
@@ -44,7 +45,11 @@ class TopSection extends StatelessWidget {
                   style: TextStyle(color: GColors.white),
                 ),
                 child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(builder: (context) => const CartPage()),
+                    );
+                  },
                   icon: const Icon(Iconsax.shopping_bag, color: GColors.white),
                 ),
               )

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:flutter_mapp_clean_architecture/core/constants/animations.dart';
+import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/addresses_page.dart';
+import 'package:flutter_mapp_clean_architecture/features/shop/presentation/pages/cart_page.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/profile_widgets/menu_tile.dart';
 import 'package:flutter_mapp_clean_architecture/features/shop/presentation/widgets/profile_widgets/sliver_appbar_delegate.dart';
 import 'package:iconsax/iconsax.dart';
@@ -9,6 +11,7 @@ import '../../../../../core/constants/sizes.dart';
 import '../../../../../core/constants/texts.dart';
 import '../../../../../core/device/device_utli.dart';
 import '../../../../../core/widgets/header.dart';
+import '../../pages/my_orders_page.dart';
 
 class AccountSettingsGroup extends StatelessWidget {
   const AccountSettingsGroup({
@@ -46,19 +49,31 @@ class AccountSettingsGroup extends StatelessWidget {
                 title: 'My Address',
                 subtitle: 'Text shopping delivery address',
                 icon: Iconsax.safe_home,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const AddressesPage()),
+                  );
+                },
               ),
               GMenuTile(
                 title: 'My Cart',
                 subtitle: 'Add, remove products and move to checkout',
                 icon: Iconsax.shopping_cart,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const CartPage()),
+                  );
+                },
               ),
               GMenuTile(
                 title: 'My Orders',
                 subtitle: 'In-progress and Completed Orders',
                 icon: Iconsax.bag_tick,
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) => const MyOrdersPage()),
+                  );
+                },
               ),
               GMenuTile(
                 title: 'Bank Account',
