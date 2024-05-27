@@ -3,5 +3,5 @@
 A Flutter E-Commerce App Implemented using various of features 
 
 ## Overview
-![image](screenshot/home.jpg =x250)
+<img src="screenshot/home.jpg" alt="home" width="250"/>
 
