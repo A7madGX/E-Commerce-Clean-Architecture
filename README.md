@@ -25,7 +25,7 @@ Authentication is implemented using fireAuth by a firebase service
   <img src="screenshots/signup.jpg" alt="onboarding" width="250"/>
 </p>
 
-## Home/Store/Wishlist/Profile Pages
+## Main Pages
 
 <p float="left">
   <img src="screenshots/home.jpg" alt="home" width="180"/>
@@ -33,3 +33,7 @@ Authentication is implemented using fireAuth by a firebase service
   <img src="screenshots/wishlist.jpg" alt="onboarding" width="180"/>
   <img src="screenshots/account_settings.jpg" alt="onboarding" width="180"/>
 </p>
+
+## Product Detail 
+
+<img src="screenshots/product_details.jpg" alt="home" width="300"/>
