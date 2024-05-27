@@ -7,7 +7,7 @@ A simple responsive E-commerce app implemented using clean architecture.
   <img src="screenshots/product_details.jpg" alt="details" width="230"/>
 </p>
 
-##OnBoarding Screens
+## OnBoarding Screens
 OnBoarding feature implemented for users who open the application for the first time only
 
 <p float="left">
@@ -17,7 +17,7 @@ OnBoarding feature implemented for users who open the application for the first 
 </p>
 
 
-##Authentication
+## Authentication
 Authentication is implemented using fireAuth by a firebase service
 
 <p float="left">
@@ -25,7 +25,7 @@ Authentication is implemented using fireAuth by a firebase service
   <img src="screenshots/signup.jpg" alt="onboarding" width="250"/>
 </p>
 
-##Home/Store/Wishlist/Profile Pages
+## Home/Store/Wishlist/Profile Pages
 
 <p float="left">
   <img src="screenshots/home.jpg" alt="home" width="250"/>
