@@ -7,6 +7,17 @@ A simple responsive E-commerce app implemented using clean architecture.
   <img src="screenshots/home2.jpg" alt="details" width="230"/>
 </p>
 
+## Installing
+1- Clone the repository
+2- Run flutter pub get to install dependencies
+3- Run flutter run to start the application
+
+```
+git clone
+flutter pub get
+flutter run
+```
+
 ## OnBoarding Screens
 OnBoarding feature implemented for users who open the application for the first time only
 
