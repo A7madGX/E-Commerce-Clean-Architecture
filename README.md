@@ -36,4 +36,14 @@ Authentication is implemented using fireAuth by a firebase service
 
 ## Product Detail 
 
-<img src="screenshots/product_details.jpg" alt="home" width="300"/>
+<p float="left">
+  <img src="screenshots/product_details.jpg" alt="home" width="250"/>
+  <img src="screenshots/details2.jpg" alt="onboarding" width="250"/>
+</p>
+
+## Reviews 
+
+<p float="left">
+  <img src="screenshots/reviews.jpg" alt="home" width="250"/>
+  <img src="screenshots/reviews.jpg" alt="onboarding" width="250"/>
+</p>
