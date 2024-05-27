@@ -1,9 +1,5 @@
 # Flutter E-Commerce App
-
-A Flutter E-Commerce App Implemented using various of features 
-
-## Overview
-A simple responsive E-commerce app designed and implemented using clean architectue. 
+A simple responsive E-commerce app implemented using clean architecture. 
 
 <p float="left">
   <img src="screenshots/home.jpg" alt="home" width="230"/>
