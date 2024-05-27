@@ -1,7 +1,5 @@
-# flutter_mapp_clean_architecture
+# Flutter E-Commerce App
 
-Flutter Mapp Clean Architecture Project
+A Flutter E-Commerce App Implemented using various of features 
 
-## Getting Started
-
-Navigate to -> Lib/core/template/info_feature.txt
+## Overview
