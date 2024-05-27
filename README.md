@@ -28,8 +28,8 @@ Authentication is implemented using fireAuth by a firebase service
 ## Home/Store/Wishlist/Profile Pages
 
 <p float="left">
-  <img src="screenshots/home.jpg" alt="home" width="250"/>
-  <img src="screenshots/store.jpg" alt="onboarding" width="250"/>
-  <img src="screenshots/wishlist.jpg" alt="onboarding" width="250"/>
-  <img src="screenshots/account_settings.jpg" alt="onboarding" width="250"/>
+  <img src="screenshots/home.jpg" alt="home" width="200"/>
+  <img src="screenshots/store.jpg" alt="onboarding" width="200"/>
+  <img src="screenshots/wishlist.jpg" alt="onboarding" width="200"/>
+  <img src="screenshots/account_settings.jpg" alt="onboarding" width="200"/>
 </p>
