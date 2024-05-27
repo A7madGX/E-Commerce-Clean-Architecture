@@ -7,3 +7,10 @@ A simple responsive E-commerce app implemented using clean architecture.
   <img src="screenshots/product_details.jpg" alt="details" width="230"/>
 </p>
 
+##Authentication
+Authentication is implemented using fireAuth by a firebase service
+
+<p float="left" align="middle">
+  <img src="screenshots/signin.jpg" alt="home" width="250"/>
+  <img src="screenshots/signup.jpg" alt="onboarding" width="250"/>
+</p>
