@@ -8,8 +8,8 @@ A simple responsive E-commerce app implemented using clean architecture.
 </p>
 
 ## Installing
-1- Clone the repository
-2- Run flutter pub get to install dependencies
+1- Clone the repository 
+2- Run flutter pub get to install dependencies 
 3- Run flutter run to start the application
 
 ```
