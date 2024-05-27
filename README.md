@@ -45,5 +45,11 @@ Authentication is implemented using fireAuth by a firebase service
 
 <p float="left">
   <img src="screenshots/reviews.jpg" alt="home" width="250"/>
-  <img src="screenshots/reviews.jpg" alt="onboarding" width="250"/>
+  <img src="screenshots/reviews2.jpg" alt="onboarding" width="250"/>
 </p>
+
+# Ongoing Features
+- Backend Integration
+- Adaptiveness
+- Notifications
+- Payments using credit/debit cards
